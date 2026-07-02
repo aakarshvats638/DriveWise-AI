@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+}
+
+.recommend-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 50px 20px;
+}
+
+.recommend-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.recommend-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin: 15px 0 35px;
+}
+
+/* =========================
+   Form
+========================= */
+
+.recommend-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: .2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+}
+
+.recommend-btn {
+  grid-column: 1 / -1;
+
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.recommend-btn:hover {
+  background: #1d4ed8;
+}
+
+.recommend-btn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+/* =========================
+   Loading
+========================= */
+
+.loading {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+
+  margin: auto;
+  border-radius: 50%;
+
+  border: 5px solid #ddd;
+  border-top: 5px solid #2563eb;
+
+  animation: spin .8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   Error
+========================= */
+
+.error {
+  margin-top: 25px;
+
+  padding: 15px;
+  border-radius: 8px;
+
+  background: #ffe5e5;
+  color: #d60000;
+}
+
+/* =========================
+   Results
+========================= */
+
+.result-title {
+  margin: 50px 0 25px;
+  color: #222;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 25px;
+}
+
+/* =========================
+   Card
+========================= */
+
+.car-card {
+  background: white;
+
+  padding: 25px;
+  border-radius: 14px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+  transition: .3s;
+}
+
+.car-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.12);
+}
+
+.car-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 6px;
+}
+
+.car-card h4 {
+  color: #666;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.car-card p {
+  margin: 10px 0;
+  color: #444;
+}
+
+.score {
+  margin-top: 18px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.score span {
+  color: #16a34a;
+}
+
+.reason {
+  margin-top: 20px;
+  padding: 15px;
+
+  background: #eef6ff;
+
+  border-left: 4px solid #2563eb;
+  border-radius: 8px;
+}
+
+.reason strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.reason p {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+  .recommend-container h1 {
+    font-size: 2rem;
+  }
+
+  .recommend-form {
+    padding: 20px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

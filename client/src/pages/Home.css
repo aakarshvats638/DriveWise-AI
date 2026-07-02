@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  min-height: 100vh;
+  background: #f5f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hero */
+
+.hero {
+  height: 55vh;
+  background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 750px;
+}
+
+.overlay h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* Cards */
+
+.features {
+  max-width: 1100px;
+  margin: -70px auto 60px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  width: 340px;
+  background: white;
+  border-radius: 16px;
+  padding: 35px 28px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.card button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: .3s;
+}
+
+.card button:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .hero {
+    height: 45vh;
+  }
+
+  .overlay h1 {
+    font-size: 2.4rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+
+  .features {
+    margin-top: -50px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:18px 40px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,.00);
+}
+
+.nav-links{
+    display: flex;
+    gap:20px
+}
+.nav-links span{
+    cursor:pointer;
+    font-weight: 600;
+}
